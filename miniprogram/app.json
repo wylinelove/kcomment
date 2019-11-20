@@ -1,0 +1,50 @@
+{
+  "pages": [
+    "pages/home1/home1",
+    "pages/comment/comment",
+    "pages/profile/profile",
+    "pages/map/map"
+  ],
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示"
+    }
+  },
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#f68170",
+    "navigationBarTitleText": "K Film review",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "color": "#bfbfbf ",
+    "selectedColor": "#f68170",
+    "list": [{
+      "pagePath": "pages/home1/home1",
+      "text": "首页",
+      "iconPath": "src/images/1.png",
+      "selectedIconPath": "src/images/2.png"
+    },
+    {
+      "pagePath": "pages/map/map",
+      "text": "地图",
+      "iconPath": "src/images/3.png",
+      "selectedIconPath": "src/images/4.png"
+    },{
+      "pagePath": "pages/profile/profile",
+      "text": "我的",
+      "iconPath": "src/images/5.png",
+      "selectedIconPath": "src/images/6.png"
+    }]
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  },
+  "debug": true,
+  "navigateToMiniProgramAppIdList": [
+    "wx026375cbf980b43b"
+  ]
+}

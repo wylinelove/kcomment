@@ -1,0 +1,76 @@
+{
+	"miniprogramRoot": "miniprogram/",
+	"cloudfunctionRoot": "cloudfunctions/",
+	"setting": {
+		"urlCheck": true,
+		"es6": true,
+		"enhance": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true,
+		"coverView": true,
+		"autoAudits": false,
+		"checkInvalidKey": true,
+		"checkSiteMap": true,
+		"uploadWithSourceMap": true,
+		"babelSetting": {
+			"ignore": [],
+			"disablePlugins": [],
+			"outputPath": ""
+		},
+		"nodeModules": true
+	},
+	"appid": "wx872533b8c20d9860",
+	"projectname": "kcomment",
+	"libVersion": "2.8.1",
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"list": []
+		},
+		"miniprogram": {
+			"current": 3,
+			"list": [
+				{
+					"id": -1,
+					"name": "db guide",
+					"pathName": "pages/databaseGuide/databaseGuide",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "pages/comment/comment",
+					"pathName": "pages/comment/comment",
+					"query": "id=3097572",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/mymovie/mymovie",
+					"pathName": "pages/mymovie/mymovie",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/comment/comment",
+					"pathName": "pages/comment/comment",
+					"scene": null
+				}
+			]
+		}
+	}
+}

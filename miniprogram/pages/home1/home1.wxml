@@ -1,0 +1,35 @@
+<!-- 一部电影区域 -->
+<view wx:for="{{list}}" wx:key="index" class="movie">
+  <!-- 左侧 电影图片(海报) -->
+  <image class="movieImg" src="{{item.images.small}}"></image>
+  <!-- 右侧 电影介绍 -->
+  <view class="movieInfo">
+  <!--      标题 -->
+  <view class="movieTitle">
+  <text> {{item.title}}</text>
+  </view>
+  <view>
+    <text space="ensp" wx:for="{{item.genres}}" wx:key="index" >{{item}} </text>
+  </view>
+  <!--      评分-->
+  <view class="movieScore"> 
+  <text>评分：</text>
+  <text>{{item.rating.average}}</text>
+  </view>
+  <!--      主演 -->
+  <view>
+  <text>主演：</text>
+  <text  space="ensp"  wx:for="{{item.casts}}" wx:key="index">{{item.name}} </text>
+  </view>
+  <!--      年份 -->
+  <view>
+  <text>上映日期：</text>
+  <text>{{item.mainland_pubdate}}</text>
+  </view>
+  
+</view>
+<view class="movieCom">
+  <!--      详情按钮 -->
+  <button bindtap="jumpComment" data-id="{{item.id}}" class="movieComment">详情</button>
+</view>
+</view>

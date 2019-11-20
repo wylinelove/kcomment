@@ -1,0 +1,84 @@
+<!--pages/comment/comment.wxml-->
+<!-- <text>pages/comment/comment.wxml</text> -->
+<!-- <view>{{id}}</view> -->
+<view>
+  <!-- 电影图片 模糊 -->
+  <view style="background:url({{detail.images.large}}) no-repeat top" class="detail-container"></view>
+  <!-- 电影遮罩层-->
+  <view class="detail-mask"></view>
+  <!-- 电影介绍 -->
+  <view class="detail-info">
+    <!-- 左侧电影图片 -->
+    <image src="{{detail.images.large}}" class="detail-img"></image>
+    <!-- 右侧电影标题 -->
+    <view class="detail">
+    <!-- 右侧电影原标题 -->
+    <view class="detail-nm">{{detail.title}}</view>
+    <!--      电影分数 -->
+    <view class="detail-sc">
+    <text>{{detail.rating.average}}</text>
+    </view>
+    <!-- 国家 -->
+    <view>{{detail.countries[0]}}</view>
+    <!-- 导演 -->
+    <view>
+    <text space="ensp" wx:for="{{detail.directors}}" wx:key="index">{{'导演：'+item.name}} </text>
+    </view>
+    </view>
+  </view>
+  <!--电影描述 -->
+  <view class="desc">
+    {{detail.summary}}
+  </view>
+  <!-- 用户输入框  评论内容 -->
+    <van-field
+    value="{{ content }}"
+    placeholder="写一些评论"
+    bind:change="onContentChange"
+  />
+  <!-- 打分 -->
+  <van-rate value="{{ score }}" bind:change="onScoreChange" />
+  <!-- 按钮上传图片(选中) -->
+  <van-button type="warning" size="large" bindtap="selectImg">
+    上传图片
+  </van-button>
+  <!-- 长传图片预览区域 -->
+  <view class="commentImg">
+    
+    <image src="{{item}}" wx:for="{{images}}" wx:key="index" class="comment-img"></image>
+  </view>
+  <!-- 按钮发表评论 -->
+  <van-button type="danger" size="large" bindtap="submit">
+    发表评论
+  </van-button>
+</view>
+<view class="comment">
+  <view class="comtext">神评：</view>
+  <!-- 评论循环 -->
+    <view class="comArea" 
+    wx:for="{{comment}}" 
+    wx:key="index">
+    <!-- 头像 -->
+      <open-data  class="comAvatar"
+          type="userAvatarUrl"></open-data>
+      <!-- 昵称 -->
+        <open-data type="userNickName"
+        class="comName"></open-data>
+      <!-- 评分 -->
+      <view class="comScore">
+        <van-rate readonly 
+      value="{{item.score}}"/>
+      </view>
+      <!-- 评论内容 -->
+      <view class="areaText">
+        <view>
+          {{item.content}}
+        </view>
+        <view class="aTextImg">
+          <image wx:for="{{item.fileIds}}" 
+            wx:key="index" 
+            src="{{item}}" class="comment-img"></image>
+        </view>
+      </view>
+    </view>  
+</view>
